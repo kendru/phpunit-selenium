@@ -97,6 +97,18 @@ class Extensions_Selenium2TestCaseTest extends Tests_Selenium2TestCase_BaseTestC
         $this->assertEquals('Other div', $elements[0]->text());
     }
 
+    /**
+     * @group uploads
+     */
+    public function testUploadCommand()
+    {
+        $this->url('html/test_element_upload.html');
+        $file = $this->file(__FILE__);
+        $upload = $this->byId('upload');
+        $upload->value($file);
+        $this->assertStringEndsWith('php', $upload->value(), 'ERROR!!!');
+    }
+
     public function testSelectOptionsInMultiselect()
     {
         $this->url('html/test_multiselect.html');

@@ -112,7 +112,6 @@ class PHPUnit_Extensions_Selenium2TestCase_Element
             'size' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericAccessor',
             'submit' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost',
             'text' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericAccessor',
-            'upload' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Upload',
             'value' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_Value',
             'tap' => $this->touchCommandFactoryMethod('touch/click'),
             'scroll' => $this->touchCommandFactoryMethod('touch/scroll'),

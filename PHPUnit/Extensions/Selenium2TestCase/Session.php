@@ -122,6 +122,7 @@ class PHPUnit_Extensions_Selenium2TestCase_Session
             'doubleclick' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost',
             'execute' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost',
             'executeAsync' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost',
+            'file' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_File',
             'forward' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost',
             'frame' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Frame',
             'keys' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Keys',

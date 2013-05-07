@@ -53,11 +53,11 @@
  * @link       http://www.phpunit.de/
  * @since      Class available since Release 1.2.9
  */
-class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Upload
-    extends PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost
+class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_File
+    extends PHPUnit_Extensions_Selenium2TestCase_Command
 {
-
     public function __construct($filename, PHPUnit_Extensions_Selenium2TestCase_URL $url)
+    {
         if (is_null($filename) || !is_scalar($filename) || !file_exists($filename)) {
             throw new BadMethodCallException('Wrong parameter for upload(): expecting an absolute file path.');
         } else {
@@ -69,12 +69,16 @@ class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Upload
         	ob_start();
         	readfile($tmpzip);
         	$contents = ob_get_clean();
-        	ob_end_clean();
         	$contents = base64_encode($contents);
 
             $jsonParameters = array('file' => $contents);
         }
 
         parent::__construct($jsonParameters, $url);
+    }
+
+    public function httpMethod()
+    {
+        return 'POST';
     }
 }

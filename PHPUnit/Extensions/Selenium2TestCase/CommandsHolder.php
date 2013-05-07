@@ -96,6 +96,7 @@ abstract class PHPUnit_Extensions_Selenium2TestCase_CommandsHolder
 
     public function __call($commandName, $arguments)
     {
+        // echo("Command name: $commandName\n\n");
         $jsonParameters = $this->extractJsonParameters($arguments);
         $response = $this->driver->execute($this->newCommand($commandName, $jsonParameters));
         return $response->getValue();
