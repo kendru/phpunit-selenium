@@ -43,7 +43,7 @@
  */
 
 /**
- * Gets or posts an attribute from/to the session (title, alert text, etc.)
+ * Uploads a file to the selenium server and gets the filename
  *
  * @package    PHPUnit_Selenium
  * @author     Jonathan Lipps <jlipps@gmail.com>
