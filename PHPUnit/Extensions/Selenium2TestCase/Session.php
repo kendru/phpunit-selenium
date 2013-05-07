@@ -130,7 +130,6 @@ class PHPUnit_Extensions_Selenium2TestCase_Session
             'screenshot' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericAccessor',
             'source' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_GenericAccessor',
             'title' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_GenericAccessor',
-            'upload' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Upload',
             'url' => function ($jsonParameters, $commandUrl) use ($baseUrl) {
                 return new PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Url($jsonParameters, $commandUrl, $baseUrl);
             },

@@ -54,7 +54,7 @@
  * @since      Class available since Release 1.2.9
  */
 class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Upload
-    extends PHPUnit_Extensions_Selenium2TestCase_SessionCommand_GenericPost
+    extends PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost
 {
 
     public function __construct($filename, PHPUnit_Extensions_Selenium2TestCase_URL $url)
