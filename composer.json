@@ -1,6 +1,6 @@
 {
-    "name": "phpunit/phpunit-selenium",
-    "description": "Selenium Server integration for PHPUnit",
+    "name": "kendru/phpunit-selenium",
+    "description": "Selenium Server integration for PHPUnit, with update for file uploads",
     "type": "library",
     "keywords": [
         "xunit",
@@ -19,7 +19,12 @@
             "name": "Giorgio Sironi",
             "email": "info@giorgiosironi.com",
             "role": "developer"
-        }
+        },
+		{
+			"name": "Andrew Meredith",
+			"email": "Andrew.Meredith@mywedding.com",
+			"role": "developer"
+		}
     ],
     "support": {
         "issues": "https://github.com/sebastianbergmann/phpunit-selenium/issues",
