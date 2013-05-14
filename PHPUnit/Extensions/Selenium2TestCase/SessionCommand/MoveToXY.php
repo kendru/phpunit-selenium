@@ -56,7 +56,7 @@ class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveToXY
     public function __construct(array $offsets,
                                 PHPUnit_Extensions_Selenium2TestCase_URL $url)
     {
-        if ($element instanceof PHPUnit_Extensions_Selenium2TestCase_Element) {
+        if (is_array($offsets)) {
             $jsonParameters = array(
                 'xoffset' => $offsets['x'],
                 'yoffset' => $offsets['y']
