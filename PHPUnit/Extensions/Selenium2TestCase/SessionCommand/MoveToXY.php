@@ -53,13 +53,13 @@
 class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveToXY
     extends PHPUnit_Extensions_Selenium2TestCase_Command
 {
-    public function __construct($dX, $dY,
+    public function __construct(array $offsets,
                                 PHPUnit_Extensions_Selenium2TestCase_URL $url)
     {
         if ($element instanceof PHPUnit_Extensions_Selenium2TestCase_Element) {
             $jsonParameters = array(
-                'xoffset' => $dX,
-                'yoffset' => $dY
+                'xoffset' => $offsets['x'],
+                'yoffset' => $offsets['y']
             );
         } else {
             throw new PHPUnit_Extensions_Selenium2TestCase_Exception('Only moving by an X and Y offset is supported.');
