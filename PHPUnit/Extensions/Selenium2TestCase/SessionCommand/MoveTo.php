@@ -68,6 +68,10 @@ class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveTo
                 'xoffset' => $element['x'],
                 'yoffset' => $element['y']
             );
+
+            if (isset($element['element'])) {
+                $jsonParameters['element'] = $element['element'];
+            }
         } else {
             throw new PHPUnit_Extensions_Selenium2TestCase_Exception('Only moving over an element or an (x,y) coordinate pair is supported. Please pass a PHPUnit_Extensions_Selenium2TestCase_Element instance.');
         }
