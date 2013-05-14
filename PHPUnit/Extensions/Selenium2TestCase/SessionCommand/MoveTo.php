@@ -63,8 +63,13 @@ class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveTo
             $jsonParameters = array(
                 'element' => $element->getId()
             );
+        } elseif (is_array($element)) {
+            $jsonParameters = array(
+                'xoffset' => $element['x'],
+                'yoffset' => $element['y']
+            );
         } else {
-            throw new PHPUnit_Extensions_Selenium2TestCase_Exception('Only moving over an element is supported. Please pass a PHPUnit_Extensions_Selenium2TestCase_Element instance.');
+            throw new PHPUnit_Extensions_Selenium2TestCase_Exception('Only moving over an element or an (x,y) coordinate pair is supported. Please pass a PHPUnit_Extensions_Selenium2TestCase_Element instance.');
         }
 
         parent::__construct($jsonParameters, $url);
