@@ -70,7 +70,7 @@ class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveTo
             );
 
             if (isset($element['element'])) {
-                $jsonParameters['element'] = $element['element'];
+                $jsonParameters['element'] = $element['element']->getId();
             }
         } else {
             throw new PHPUnit_Extensions_Selenium2TestCase_Exception('Only moving over an element or an (x,y) coordinate pair is supported. Please pass a PHPUnit_Extensions_Selenium2TestCase_Element instance.');
