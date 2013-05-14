@@ -127,6 +127,7 @@ class PHPUnit_Extensions_Selenium2TestCase_Session
             'frame' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Frame',
             'keys' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Keys',
             'moveto' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveTo',
+            'movetooffset' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveToXY',
             'refresh' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost',
             'screenshot' => 'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericAccessor',
             'source' => 'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_GenericAccessor',
